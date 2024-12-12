@@ -20,3 +20,23 @@ function isOdd(a){
 }
 
 isOdd(4)
+
+
+// 3) Write a function named findMin that takes an array of numbers and returns the smallest number from the array.
+
+function findMin(a){
+    if(a.length===0){
+        return undefined;
+    }
+    let min=a[0];
+    for (let i=1;i<a.length;i++){
+        if(min>a[i]){
+            min=a[i];
+        }
+    }
+    return min;
+}
+
+const a=[1,2,3,4,11,1,0];
+minNumber=findMin(a)
+console.log(minNumber);
