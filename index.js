@@ -56,4 +56,24 @@ function filterEvenNumbers(a){
 
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 const evenNumbers = filterEvenNumbers(numbers);
-console.log(evenNumbers); // Output: [2, 4, 6, 8, 10]
+console.log(evenNumbers); 
+
+// 5) Write a function named sortArrayDescending that takes an array of numbers and returns a new array sorted in descending order.
+
+function sortArrayDescending(a){
+    const sorted=a;
+    for (let i=0;i<a.length-1;i++){
+        for(j=i+1;j<a.length;j++){
+            if(sorted[i]<sorted[j]){
+                let temp=sorted[j];
+                sorted[j]=sorted[i];
+                sorted[i]=temp;
+            }
+        }
+    }
+    return sorted;
+}
+
+let number = [5, 2, 9, 1, 5, 6];
+let sortedNumbers = sortArrayDescending(number);
+console.log(sortedNumbers); 
