@@ -40,3 +40,20 @@ function findMin(a){
 const a=[1,2,3,4,11,1,0];
 minNumber=findMin(a)
 console.log(minNumber);
+
+
+// 4) Write a function named filterEvenNumbers that takes an array of numbers and returns a new array containing only the even numbers.
+
+function filterEvenNumbers(a){
+    let e=[];
+    for(let i=0;i<a.length;i++){
+        if(a[i]%2===0){
+            e.push(a[i]);
+        }
+    }
+    return e;
+}
+
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const evenNumbers = filterEvenNumbers(numbers);
+console.log(evenNumbers); // Output: [2, 4, 6, 8, 10]
