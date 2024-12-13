@@ -77,3 +77,48 @@ function sortArrayDescending(a){
 let number = [5, 2, 9, 1, 5, 6];
 let sortedNumbers = sortArrayDescending(number);
 console.log(sortedNumbers); 
+
+// 6) Write a function named lowercaseFirstLetter that takes a string and returns the same string with the first letter lowercased.
+
+function lowercaseFirstLetter(s){
+    if(s.length===0){
+        return s;
+    }
+    return s[0].toLowerCase()+s.slice(1);
+}
+
+const result = lowercaseFirstLetter("Hello World");
+console.log(result); 
+
+// 7) Write a function named findAverage that takes an array of numbers and returns the average of all elements.
+
+function findAverage(a){
+    if(a.length===0)
+    {
+        return a;
+    }
+
+    let sum=0;
+    for(let i=0;i<a.length;i++){
+        sum+=a[i];
+    }
+    let avg=(sum)/(a.length);
+    return avg;
+}
+
+let num = [10, 20, 30, 40, 50];
+let average = findAverage(num);
+console.log(average);
+
+// 8) Write a function named isLeapYear that takes a year as an argument and returns true if the year is a leap year, and false if it is not.
+
+function isLeapYear(year){
+    if ((year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0)) {
+        return true;
+    }
+    return false;
+}
+
+console.log(isLeapYear(2000)); 
+console.log(isLeapYear(1900)); 
+console.log(isLeapYear(2023));
